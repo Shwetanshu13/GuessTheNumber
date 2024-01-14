@@ -1,0 +1,22 @@
+.navbar{
+   font-size: 20px;
+   font-weight: 600;
+   margin-left: 0;
+   padding: 2vh;
+   background-color: #FEFAE0;
+}
+
+.list{
+    display: flex;
+    gap: 50px;
+}
+
+.list li{
+    list-style: none;
+    cursor: pointer;
+}
+
+.link{
+    color: black;
+    text-decoration: none;
+}

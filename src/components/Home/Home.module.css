@@ -1,0 +1,45 @@
+.home{
+    width: 50%;
+    margin: auto;
+    margin-top: 2%;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    background: url('/backg.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #F8FAE5;
+}
+
+.h1{
+    font-size: 60px;
+}
+
+.ins{
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn{
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.steps ul{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+
