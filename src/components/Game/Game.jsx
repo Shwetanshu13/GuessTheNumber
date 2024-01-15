@@ -39,12 +39,12 @@ const Game = () => {
     <div className={styles.game}>
         <div className={styles.container}>
           <div className={styles.form}>
-              <h3 htmlFor="input">Your Guess</h3>
-              <input type="number" id='guessNum' value={guess} onChange={handleGuess} />
-              <h2 className={styles.instruction}>{inst}</h2>
-              <p className={styles.guessnum}>Number of Guesses : <b>{numOfGuess}</b></p>
-              <button className={styles.enter} onClick={correct}>Try this Guess</button>
-              <button className={styles.reset} onClick={resetGame}>Reset</button>
+                <h3 htmlFor="input">Your Guess</h3>
+                <input type="number" id='guessNum' value={guess} onChange={handleGuess} />
+                <h2 className={styles.instruction}>{inst}</h2>
+                <p className={styles.guessnum}>Number of Guesses : <b>{numOfGuess}</b></p>
+                <button className={styles.enter} onClick={correct}>Try this Guess</button>
+                <button className={styles.reset} onClick={resetGame}>Reset</button>
           </div>
         </div>
     </div>
