@@ -20,13 +20,13 @@ const Home = () => {
             </div>
           </div>
           <div className={styles.play}>
-            <Link to='/easy'>
-              <button className={styles.btn}>Easy Mode</button>
+            <Link to='/game'>
+              <button className={styles.btn}>Play</button>
             </Link>
           </div>
           <div className={styles.play}>
-            <Link to='/game'>
-              <button className={styles.btn}>Play</button>
+            <Link to='/easy'>
+              <button className={styles.btn}>Hard Mode</button>
             </Link>
           </div>
 

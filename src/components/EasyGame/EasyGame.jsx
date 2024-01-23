@@ -43,7 +43,7 @@ const EasyGame = () => {
         <div className={styles.game}>
             <div className={styles.container}>
                 <div className={styles.form}>
-                    <h1>Easy Mode</h1>
+                    <h1>Hard Mode</h1>
                     <h3 htmlFor="input">Your Guess</h3>
                     <input type="number" id='guessNum' value={guess} onChange={handleGuess} />
                     <h2 className={styles.instruction}>{inst}</h2>
