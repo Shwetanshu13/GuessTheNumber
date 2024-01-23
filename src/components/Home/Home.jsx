@@ -25,7 +25,7 @@ const Home = () => {
             </Link>
           </div>
           <div className={styles.play}>
-            <Link to='/easy'>
+            <Link to='/hard'>
               <button className={styles.btn}>Hard Mode</button>
             </Link>
           </div>
