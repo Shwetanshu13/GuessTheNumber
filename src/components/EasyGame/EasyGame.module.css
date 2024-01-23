@@ -22,6 +22,10 @@
     color: #116A7B;
 }
 
+.form h1{
+    font-size: 40px;
+}
+
 .form input{
     height: 50px;
     width: 200px;
@@ -57,9 +61,14 @@
     cursor: pointer;
     border: 0;
     border-radius: 15px;
-    padding: 10px;
+    padding: 10px;   
 }
 
 .enter:disabled{
     visibility: hidden;
+}
+
+.note{
+    text-align: center;
+    color: brown;
 }

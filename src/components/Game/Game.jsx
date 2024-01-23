@@ -3,6 +3,8 @@ import styles from './Game.module.css'
 
 const Game = () => {
   let x = Math.floor((Math.random() * 100) + 1);
+
+  const [live, setLive] = useState(false)
   const [num, setNum] = useState(x)
   const [inst, setInst] = useState("You are yet to guess ... ")
   const [guess, setGuess] = useState("")
@@ -13,6 +15,7 @@ const Game = () => {
     setNumOfGuess(numOfGuess+1)
     if (guess==num) {
       setInst("Correct guess")
+      setLive(true)
     }
     else if (guess>num) {
       setInst("You are guessing high")
@@ -24,7 +27,6 @@ const Game = () => {
   }
   
   const handleGuess = (event)=>{
-    // console.log("changed")
     setGuess(event.target.value)
   }
 
@@ -33,6 +35,7 @@ const Game = () => {
     setInst("You are yet to guess ...")
     setNumOfGuess(0)
     setGuess("")
+    setLive(false)
   }
 
   return (
@@ -43,7 +46,7 @@ const Game = () => {
                 <input type="number" id='guessNum' value={guess} onChange={handleGuess} />
                 <h2 className={styles.instruction}>{inst}</h2>
                 <p className={styles.guessnum}>Number of Guesses : <b>{numOfGuess}</b></p>
-                <button className={styles.enter} onClick={correct}>Try this Guess</button>
+                <button className={styles.enter} onClick={correct} disabled={live} >Try this Guess</button>
                 <button className={styles.reset} onClick={resetGame}>Reset</button>
           </div>
         </div>

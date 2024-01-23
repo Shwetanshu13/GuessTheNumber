@@ -20,6 +20,11 @@ const Home = () => {
             </div>
           </div>
           <div className={styles.play}>
+            <Link to='/easy'>
+              <button className={styles.btn}>Easy Mode</button>
+            </Link>
+          </div>
+          <div className={styles.play}>
             <Link to='/game'>
               <button className={styles.btn}>Play</button>
             </Link>
