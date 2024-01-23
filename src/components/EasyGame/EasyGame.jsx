@@ -11,7 +11,7 @@ const EasyGame = () => {
     const [prevGuess, setPrevGuess] = useState(num)
     const [numOfGuess, setNumOfGuess] = useState(0)
 
-    console.log(num)
+    // console.log(num)
     const correct = ()=>{
         setNumOfGuess(numOfGuess+1)
         if (guess==num) {
