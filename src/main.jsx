@@ -10,14 +10,14 @@ import {
 } from "react-router-dom";
 import Home from "./components/Home/Home";
 import Game from "./components/Game/Game";
-import EasyGame from "./components/EasyGame/EasyGame";
+import HardGame from "./components/HardGame/HardGame";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route path="" element={<Home />} />
       <Route path="game" element={<Game />} />
-      <Route path="hard" element={<EasyGame />} />
+      <Route path="hard" element={<HardGame />} />
     </Route>
   )
 )

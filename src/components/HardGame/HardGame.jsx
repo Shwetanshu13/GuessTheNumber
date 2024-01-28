@@ -1,21 +1,23 @@
 import React, {useState} from 'react'
-import styles from './EasyGame.module.css'
+import styles from './HardGame.module.css'
 
-const EasyGame = () => {
+const HardGame = () => {
     let x = Math.floor((Math.random() * 100) + 1);
 
     const [live, setLive] = useState(false)
     const [num, setNum] = useState(x)
     const [inst, setInst] = useState("You are yet to guess ... ")
-    const [guess, setGuess] = useState("")
+    const [guess, setGuess] = useState(null)
     const [prevGuess, setPrevGuess] = useState(num)
     const [numOfGuess, setNumOfGuess] = useState(0)
+    const [correctGuess, setCorrectGuess] = useState("")
 
     // console.log(num)
     const correct = ()=>{
         setNumOfGuess(numOfGuess+1)
         if (guess==num) {
-        setInst("Correct guess");
+        setInst("Correct guess ");
+        setCorrectGuess(`The number was ${guess}`)
         setLive(true)
         }
         else if (Math.abs(prevGuess-num)>Math.abs(guess-num)) {
@@ -47,6 +49,7 @@ const EasyGame = () => {
                     <h3 htmlFor="input">Your Guess</h3>
                     <input type="number" id='guessNum' value={guess} onChange={handleGuess} />
                     <h2 className={styles.instruction}>{inst}</h2>
+                    <h2 className={styles.instruction}>{correctGuess}</h2>
                     <p className={styles.guessnum}>Number of Guesses : <b>{numOfGuess}</b></p>
                     <button className={styles.enter} onClick={correct} disabled={live} >Try this Guess</button>
                     <button className={styles.reset} onClick={resetGame}>Reset</button>
@@ -59,4 +62,4 @@ const EasyGame = () => {
     )
 }
 
-export default EasyGame
+export default HardGame
