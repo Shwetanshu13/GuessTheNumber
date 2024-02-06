@@ -3,7 +3,7 @@
     width: 100%;
 }
 
-.form{
+form{
     background-color: #F6FDC3;
     border: 5px solid #6096B4;
     border-radius: 25px;
@@ -17,16 +17,16 @@
     width: 50%;
 }
 
-.form h3{
+form h3{
     font-size: 32px;
     color: #116A7B;
 }
 
-.form h1{
+form h1{
     font-size: 40px;
 }
 
-.form input{
+form input{
     height: 50px;
     width: 200px;
     font-size: 32px;
@@ -36,7 +36,7 @@
     border-radius: 10px;
 }
 
-.form p{
+form p{
     font-size: 20px;
 }
 

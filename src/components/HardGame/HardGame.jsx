@@ -40,22 +40,25 @@ const HardGame = () => {
         setNumOfGuess(0)
         setGuess("")
         setLive(false)
+        setCorrectGuess("")
     }
     return (
         <div className={styles.game}>
             <div className={styles.container}>
                 <div className={styles.form}>
-                    <h1>Hard Mode</h1>
-                    <h3 htmlFor="input">Your Guess</h3>
-                    <input type="number" id='guessNum' value={guess} onChange={handleGuess} />
-                    <h2 className={styles.instruction}>{inst}</h2>
-                    <h2 className={styles.instruction}>{correctGuess}</h2>
-                    <p className={styles.guessnum}>Number of Guesses : <b>{numOfGuess}</b></p>
-                    <button className={styles.enter} onClick={correct} disabled={live} >Try this Guess</button>
-                    <button className={styles.reset} onClick={resetGame}>Reset</button>
-                    <p className={styles.note}>
-                        If you are closer to the number than your previuos guess, the hint will change to HOTTER. Else it will change to HOT.
-                    </p>
+                    <form onSubmit={(e)=>{e.preventDefault()}}>
+                        <h1>Hard Mode</h1>
+                        <h3 htmlFor="input">Your Guess</h3>
+                        <input type="number" id='guessNum' value={guess} onChange={handleGuess} />
+                        <h2 className={styles.instruction}>{inst}</h2>
+                        <h2 className={styles.instruction}>{correctGuess}</h2>
+                        <p className={styles.guessnum}>Number of Guesses : <b>{numOfGuess}</b></p>
+                        <button className={styles.enter} onClick={correct} disabled={live} >Try this Guess</button>
+                        <button className={styles.reset} onClick={resetGame}>Reset</button>
+                        <p className={styles.note}>
+                            If you are closer to the number than your previuos guess, the hint will change to HOTTER. Else it will change to HOT.
+                        </p>
+                    </form>
                 </div>
             </div>
         </div>
